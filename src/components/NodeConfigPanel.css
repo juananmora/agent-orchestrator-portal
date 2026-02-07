@@ -1,0 +1,283 @@
+.config-panel {
+  width: 360px;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--border-primary);
+  display: flex;
+  flex-direction: column;
+  animation: slideIn var(--transition-fast);
+}
+
+.config-panel-header {
+  padding: var(--spacing-4);
+  border-bottom: 1px solid var(--border-primary);
+  position: relative;
+}
+
+.config-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-2);
+}
+
+.config-node-name {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.config-close-btn {
+  position: absolute;
+  top: var(--spacing-3);
+  right: var(--spacing-3);
+  padding: var(--spacing-2);
+  color: var(--text-tertiary);
+  border-radius: var(--radius-md);
+}
+
+.config-close-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.config-panel-body {
+  flex: 1;
+  padding: var(--spacing-4);
+  overflow-y: auto;
+}
+
+.config-section {
+  margin-bottom: var(--spacing-5);
+}
+
+.config-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-2);
+}
+
+.config-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-2);
+}
+
+.use-template-btn {
+  font-size: var(--font-size-xs);
+  color: var(--color-primary);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.use-template-btn:hover {
+  background: var(--color-primary-muted);
+}
+
+.config-input-group {
+  display: flex;
+  align-items: center;
+  background: var(--bg-input);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.input-prefix {
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--bg-tertiary);
+  color: var(--text-tertiary);
+  font-size: var(--font-size-sm);
+  border-right: 1px solid var(--border-primary);
+}
+
+.config-input-group .config-input {
+  border: none;
+  border-radius: 0;
+}
+
+.config-input {
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--bg-input);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.config-input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.config-input.code {
+  font-family: 'SF Mono', Monaco, monospace;
+}
+
+.config-input.small {
+  width: auto;
+  flex: 1;
+}
+
+.config-input-with-unit {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.config-input-with-unit span {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+.config-select {
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--bg-input);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.config-select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.config-textarea {
+  width: 100%;
+  padding: var(--spacing-3);
+  background: var(--bg-input);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.config-textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.config-toggle-group {
+  display: flex;
+  background: var(--bg-input);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toggle-btn:not(:last-child) {
+  border-right: 1px solid var(--border-primary);
+}
+
+.toggle-btn:hover {
+  background: var(--bg-tertiary);
+}
+
+.toggle-btn.active {
+  background: var(--color-primary);
+  color: #000;
+  font-weight: 500;
+}
+
+.config-hint {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  margin-top: var(--spacing-2);
+}
+
+.template-vars {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-2);
+}
+
+.var-hint {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+.template-vars code {
+  font-size: 11px;
+  padding: 2px 6px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+}
+
+.config-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+}
+
+.config-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+}
+
+.config-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.config-field label {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+.config-panel-footer {
+  display: flex;
+  gap: var(--spacing-2);
+  padding: var(--spacing-4);
+  border-top: 1px solid var(--border-primary);
+}
+
+.config-panel-footer .btn {
+  flex: 1;
+}

@@ -1,0 +1,210 @@
+.custom-node {
+  position: relative;
+  min-width: 180px;
+  max-width: 250px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.custom-node:hover {
+  border-color: var(--border-secondary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.custom-node.selected {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-muted), 0 4px 12px rgba(19, 236, 91, 0.2);
+}
+
+/* Status States */
+.custom-node.running {
+  border-color: var(--color-running);
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+.custom-node.completed {
+  border-color: var(--color-success);
+}
+
+.custom-node.failed {
+  border-color: var(--color-error);
+}
+
+.custom-node.waiting {
+  border-color: var(--color-warning);
+}
+
+/* Node Header */
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-bottom: 2px solid var(--border-primary);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.node-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.node-label {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.node-menu-btn {
+  padding: 4px;
+  color: var(--text-tertiary);
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  transition: all var(--transition-fast);
+}
+
+.custom-node:hover .node-menu-btn {
+  opacity: 1;
+}
+
+.node-menu-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+/* Node Body */
+.node-body {
+  padding: var(--spacing-2) var(--spacing-3);
+}
+
+.node-config-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--font-size-xs);
+  margin-bottom: var(--spacing-1);
+}
+
+.node-config-item:last-child {
+  margin-bottom: 0;
+}
+
+.config-label {
+  color: var(--text-tertiary);
+}
+
+.config-value {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.config-code {
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 11px;
+  color: var(--color-primary);
+  background: var(--bg-primary);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+/* Status Indicator */
+.node-status-indicator {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--bg-card);
+}
+
+.node-status-indicator.running {
+  background: var(--color-running);
+  color: white;
+}
+
+.node-status-indicator.completed {
+  background: var(--color-success);
+  color: white;
+}
+
+.node-status-indicator.failed {
+  background: var(--color-error);
+  color: white;
+}
+
+.node-status-indicator.waiting {
+  background: var(--color-warning);
+  color: white;
+}
+
+.status-pulse {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: var(--radius-full);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Handles */
+.node-handle {
+  width: 12px !important;
+  height: 12px !important;
+  background: var(--bg-secondary) !important;
+  border: 2px solid var(--color-primary) !important;
+}
+
+.node-handle:hover {
+  background: var(--color-primary) !important;
+  transform: scale(1.2);
+}
+
+/* Condition Handles */
+.condition-true {
+  border-color: var(--color-success) !important;
+}
+
+.condition-true:hover {
+  background: var(--color-success) !important;
+}
+
+.condition-false {
+  border-color: var(--color-error) !important;
+}
+
+.condition-false:hover {
+  background: var(--color-error) !important;
+}
+
+.condition-label {
+  position: absolute;
+  right: -36px;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.condition-label.true {
+  top: 24%;
+  color: var(--color-success);
+}
+
+.condition-label.false {
+  top: 64%;
+  color: var(--color-error);
+}
