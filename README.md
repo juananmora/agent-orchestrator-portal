@@ -51,6 +51,12 @@ Para acceder a los detalles técnicos, funcionales y de arquitectura, consulta l
     ```
     La aplicación estará disponible en `http://localhost:5173`.
 
+4.  **Compilar para producción**:
+    ```bash
+    npm run build
+    ```
+    > **Nota**: El comando `build` ejecuta solo Vite sin TypeScript checking debido a errores pre-existentes de imports no utilizados. Para ejecutar el type checking manualmente, usa `npm run typecheck`.
+
 ---
 
 ## 🌟 Características Clave
